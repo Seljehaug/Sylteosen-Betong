@@ -1,0 +1,180 @@
+@import "variables"
+
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+body
+	font-size: 100%
+	background: $grey
+
+h1, h2, h3, h4
+	text-transform: uppercase
+	color: $dark-blue
+
+h1
+	font-size: 2.5rem
+h2
+	font-size: 1.8rem
+h3
+	font-size: 1.5rem
+h4
+	font-size: 1.2rem
+p
+	font-size: 1rem
+a
+	font-size: 1rem
+a:hover
+	color: green
+
+img
+	width: 100%
+
+// @media(max-width: 750px)
+	// h1
+	// 	font-size: 2.8rem
+	// h2
+	// 	font-size: 1.8rem
+	// 	line-height: 1.2em
+	// h3
+	// 	font-size: 1.5rem
+	// h4
+	// 	font-size: 1rem
+	// p,a
+	// 	font-size: 1rem
+	// .btn
+	// 	font-size: 1rem
+
+.bold
+	font-weight: 700
+
+.center
+	text-align: center
+
+.inner
+	width: 90%
+	max-width: 1200px
+	margin: 0 auto
+	padding: 0
+
+.content-wrapper
+	padding: 2rem 0
+	overflow: hidden
+
+// --- Icons and logos ---
+.icon
+	display: block
+	padding: 0 0
+	text-indent: -9999px
+	background-size: 100% 100%
+	background-position: center center
+	background-repeat: no-repeat
+	position: relative
+	&:hover
+		border-bottom: none
+
+.menu-icon
+	background-image: url(../img/icons/menu.png)
+	width: 25px
+
+// --- menu ---
+#mobilemenu_show
+	display: none
+
+#menu
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	background: $white
+	height: 60px
+
+#menuwrapper
+	.logo-wrapper
+		position: absolute
+	ul
+		list-style: none
+		display: flex
+		justify-content: flex-end
+	li
+		padding: 1rem
+	a
+		text-decoration: none
+		color: black
+
+section:first-of-type
+	margin-top: 60px
+
+@media(max-width: 700px)
+	#menu
+		display: none
+	#mobilemenu_show
+		display: block
+
+@media(min-width: 700px)
+	#mobilemenu
+		display: none
+
+// Styles for the slideout menu on mobile
+.mm-menu, .mm-panels>.mm-panel:not(.mm-hidden)
+	background: blue
+	.mm-listview>li
+		color: pink
+		a
+			&:active, &:focus, &:hover
+				color: red
+// end of menu
+
+// --- Footer ---
+#footer
+	background: $light-blue
+	color: $white
+	.inner
+		display: flex
+		> div
+			width: 33.33333333333333333%
+// end of footer
+
+// --- banner-img ---
+.banner-img
+	background-image: url("../img/banner.jpg")
+	height: 40vh
+	background-size: cover
+	background-position: center
+// end of banner-img
+
+// --- three-cols ---
+.three-cols
+	width: 100%
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	> div
+		width: 32%
+
+@media(max-width: 750px)
+	.three-cols > div
+		width: 100%
+		padding-bottom: 2rem
+		&:last-child
+			padding-bottom: 0
+
+// end of three-cols
+
+// --- two-boxes ---
+.two-cols
+	width: 100%
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	> div
+		width: 48%
+
+@media(max-width: 600px)
+	.two-cols > div
+		width: 100%
+		padding-bottom: 2rem
+		&:last-child
+			padding-bottom: 0
+// end of two-cols
