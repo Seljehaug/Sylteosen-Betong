@@ -70,62 +70,6 @@ section:last-child {
   background-image: url("../img/icons/menu.png");
   width: 25px; }
 
-#mobilemenu_show {
-  display: none; }
-
-#menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: white;
-  height: 60px;
-  z-index: 100; }
-
-#menuwrapper .logo-wrapper {
-  position: absolute; }
-
-#menuwrapper ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end; }
-
-#menuwrapper li {
-  padding: 1rem; }
-
-#menuwrapper a {
-  text-decoration: none;
-  color: black; }
-
-.margin-top {
-  margin-top: 60px; }
-
-@media (max-width: 700px) {
-  #menu {
-    display: none; }
-  #mobilemenu_show {
-    display: block; } }
-
-@media (min-width: 700px) {
-  #mobilemenu {
-    display: none; } }
-
-.mm-menu,
-.mm-panels > .mm-panel:not(.mm-hidden) {
-  background: blue; }
-  .mm-menu .mm-listview > li,
-  .mm-panels > .mm-panel:not(.mm-hidden) .mm-listview > li {
-    color: pink; }
-    .mm-menu .mm-listview > li a:active, .mm-menu .mm-listview > li a:focus, .mm-menu .mm-listview > li a:hover,
-    .mm-panels > .mm-panel:not(.mm-hidden) .mm-listview > li a:active,
-    .mm-panels > .mm-panel:not(.mm-hidden) .mm-listview > li a:focus,
-    .mm-panels > .mm-panel:not(.mm-hidden) .mm-listview > li a:hover {
-      color: red; }
-
 #footer {
   background: #49ace6;
   color: white; }
@@ -331,9 +275,62 @@ section:last-child {
     width: 100%;
     border-radius: 100%; }
 
+.doc {
+  max-width: 400px;
+  margin-bottom: 2rem; }
+  .doc:last-child {
+    margin-bottom: 0; }
+
 #kontakt {
   background: #49ace6;
   color: white; }
 
 #kontakt h4 {
   color: white; }
+
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: white; }
+  #menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+  #menu li {
+    list-style: none;
+    margin-left: 1rem; }
+  #menu a {
+    text-decoration: none;
+    color: grey; }
+  #menu a:hover {
+    color: #49ace6; }
+  #menu .drop-down {
+    position: relative;
+    cursor: pointer; }
+  #menu .drop-down-content {
+    background: #49ace6;
+    position: absolute;
+    left: -33px;
+    display: none; }
+    #menu .drop-down-content ul {
+      display: block;
+      padding: 0.5rem; }
+    #menu .drop-down-content li {
+      margin: 0;
+      padding: 0.2em 0; }
+    #menu .drop-down-content a {
+      color: white; }
+  #menu .drop-down:hover .drop-down-content {
+    display: block; }
+
+.margin-top {
+  margin-top: 60px; }
