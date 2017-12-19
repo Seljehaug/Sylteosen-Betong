@@ -2,23 +2,11 @@ doctype html
 html(lang="no")
 	head
 		title Sylteosen Betong
-		meta(charset="utf-8")
-		meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
-		// jQuery
-		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
-		// Styling
-		link(rel="stylesheet", type="text/css", href="css/normalize.css")
-		link(rel="stylesheet", type="text/css", href="css/styles.css")
+		include includes/meta
 		// JS
 		script(src="js/custom.js")
-		// Mmenu 
-		link(rel="stylesheet", href="js/mmenu/css/jquery.mmenu.css", media="screen and (max-width: 700px)")
-		link(rel="stylesheet", href="js/mmenu/extensions/positioning/jquery.mmenu.positioning.css", media="screen and (max-width: 700px)")
-		script(src="js/mmenu/js/jquery.mmenu.min.js")
-		// Typekit
-		
 			
-	body
+	body#index
 		#site.page_home(canvas="container")
 			include includes/menu
 			
@@ -29,10 +17,10 @@ html(lang="no")
 			//- p Dette er en p tag
 			//- a(href="#") Dette er en link
 			
-			section.banner-img
+			section.banner-img.margin-top
 		
 			.inner
-				.section.three-cols.content-wrapper
+				section.three-cols.content-wrapper
 					.box
 						h4 Hvem er vi?
 						p irure veniam fugiat quid summis aliqua esse aliqua malis irure cillum aliqua 
@@ -53,18 +41,20 @@ html(lang="no")
 						quae quem malis elit malis eram noster fugiat esse fugiat quorum aliqua eram 
 						illum quorum aute export veniam sunt ipsum eram dolor
 					
-				.section.two-cols.content-wrapper
+				section.two-boxes.content-wrapper
 					.box
 						h2 Ferdigbetong
 						img(src="http://via.placeholder.com/600x400")
 						p aute anim quorum dolor tamen irure aliqua tamen quid elit aute illum veniam quid 
 						velit esse tempor summis amet velit quorum culpa ipsum amet duis legam esse nisi 
 						aliqua anim minim quorum noster duis ipsum noster nisi quorum tempor duis
+						a(href="ferdigbetong.html") Les mer
 					.box
 						h2 Betongvarer
 						img(src="http://via.placeholder.com/600x400")
 						p aute anim quorum dolor tamen irure aliqua tamen quid elit aute illum veniam quid 
 						velit esse tempor summis amet velit quorum culpa ipsum amet duis legam esse nisi 
 						aliqua anim minim quorum noster duis ipsum noster nisi quorum tempor duis
+						a(href="betongvarer.html") Les mer
 			
 			include includes/footer
