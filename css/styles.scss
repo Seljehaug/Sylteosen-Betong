@@ -92,7 +92,6 @@ section:last-child {
 }
 
 // --- MENU ---
-
 #mobilemenu_show {
 	display: none;
 }
@@ -417,3 +416,41 @@ section:last-child {
 	}
 }
 // end of grid
+
+// --- employees ---
+// .employees{
+// 	h4{
+// 		margin-bottom: 1rem;
+// 	}
+// }
+// end of employees
+
+// --- employees-list ---
+.employees-list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+
+	.employee{
+		width: 22%;
+	}
+
+	img{
+		width: 100%;
+		border-radius: 100%;
+	}
+
+}
+// end of employees-list
+
+
+#kontakt {
+	background: $light-blue;
+	color: $white;
+}
+
+#kontakt h4 {
+	color: $white;
+}
