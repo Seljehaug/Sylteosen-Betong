@@ -37,26 +37,36 @@
 //- 					a(href="dokumentasjon.html") Dokumentasjon
 
 #menu
-	.inner
+	nav.inner
 		.logo-wrapper
-			a.icon(href="index.html") Logo 
-		ul
-			li
-				a(href='ferdigbetong.html') Ferdigbetong
-			li
-				a(href='betongvarer.html') Betongvarer
-			li
-				a(href='betongskolen.html') Betongskolen
-			li
-				a(href='referanser.html') Referanser
-			li
-				a(href='kontakt.html') Kontakt
-			li.drop-down
-				p Drop Down
-				.drop-down-content
-					ul
-						li
-							a(href="om-oss.html") Om oss
-						li
-							a(href="dokumentasjon.html") Dokumentasjon
-				
+			a.icon.sylteosen-logo(href="index.html") Logo 
+		#menu-normal
+			a.nav-link(href="ferdigbetong.html") Ferdigbetong
+			a.nav-link(href="betongvarer.html") Betongvarer
+			a.nav-link(href="betongskolen.html") Betongskolen
+			a.nav-link(href="referanser.html") Referanser
+			a.nav-link(href="kontakt.html") Kontakt
+			
+			.menu-drop-down
+				span.icon.menu-icon Meny
+				.menu-drop-down-content
+					a(href="om-oss.html") Om oss
+					a(href="dokumentasjon.html") Dokumentasjon
+		
+		#menu-mobile
+			.toggle-menu
+				span.icon.menu-icon Meny 
+			//- .open-menu
+			//- 	span.icon.menu-icon Meny
+			//- .close-menu
+			//- 	span.icon.close-icon Lukk meny
+			.menu-content
+				a.nav-link(href="index.html") Hjem
+				a.nav-link(href="ferdigbetong.html") Ferdigbetong
+				a.nav-link(href="betongvarer.html") Betongvarer
+				a.nav-link(href="betongskolen.html") Betongskolen
+				a.nav-link(href="referanser.html") Referanser
+				a.nav-link(href="kontakt.html") Kontakt
+				a.nav-link(href="om-oss.html") Om oss
+				a.nav-link(href="dokumentasjon.html") Dokumentasjon
+			
