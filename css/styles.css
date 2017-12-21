@@ -95,7 +95,8 @@ section:last-child {
   top: 0;
   left: 0;
   right: 0;
-  background: white; }
+  background: white;
+  z-index: 100; }
   #menu nav {
     height: 80px;
     display: -webkit-box;
@@ -535,7 +536,8 @@ section:last-child {
       transition: -webkit-transform 0.1s ease-in-out;
       -o-transition: transform 0.1s ease-in-out;
       transition: transform 0.1s ease-in-out;
-      transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out; }
+      transition: transform 0.1s ease-in-out, -webkit-transform 0.1s ease-in-out;
+      z-index: 10; }
     .grid .grid-item:nth-child(5n) {
       margin-right: 0; }
   .grid .desc {

@@ -130,6 +130,7 @@ section:last-child {
 	left: 0;
 	right: 0;
 	background: white;
+	z-index: 100;
 
 	nav{
 		height: 80px;
@@ -679,6 +680,7 @@ section:last-child {
 		&:hover {
 			transform: scale(1.075);
 			transition: transform 0.1s ease-in-out;
+			z-index: 10;
 		}
 
 		&:nth-child(5n) {
