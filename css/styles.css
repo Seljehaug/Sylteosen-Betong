@@ -95,6 +95,15 @@ section:last-child {
 .facebook-logo {
   background-image: url("../img/icons/facebook.svg"); }
 
+.navigator-up {
+  background-image: url("../img/icons/navigator-up.svg"); }
+
+.navigator-left {
+  background-image: url("../img/icons/navigator-left.svg"); }
+
+.navigator-right {
+  background-image: url("../img/icons/navigator-right.svg"); }
+
 .miljofyrtarn-logo {
   background-image: url("../img/icons/miljofyrtarn.svg"); }
 
@@ -629,13 +638,56 @@ section:last-child {
   color: #00B5E2;
   text-transform: uppercase; }
 
+.showcase .info-box {
+  margin-top: 3rem; }
+
+@media (max-width: 1200px) {
+  .showcase .info-box {
+    margin-top: 0; } }
+
+@media (max-width: 1000px) {
+  .showcase > div {
+    width: 100%; } }
+
 .navigator {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-bottom: 1.25rem; }
+  .navigator a {
+    position: relative;
+    color: #006A8E; }
+  .navigator .navigator-up {
+    width: 30px;
+    height: 12px; }
+  .navigator .navigator-left, .navigator .navigator-right {
+    width: 12px;
+    height: 30px;
+    position: absolute;
+    display: inline-block; }
+  .navigator .overview a {
+    top: 5px; }
+  .navigator .navigator-up {
+    position: absolute;
+    top: -15px;
+    width: 100%; }
+  .navigator .prev a {
+    padding-left: 20px;
+    top: 5px; }
+  .navigator .navigator-left {
+    position: absolute;
+    left: 0;
+    top: -5px; }
+  .navigator .next a {
+    padding-right: 20px;
+    top: 5px; }
+  .navigator .navigator-right {
+    position: absolute;
+    right: 0;
+    top: -5px; }
 
 #kontakt {
   background: #00B5E2;

@@ -6,7 +6,7 @@ html(lang="no")
 		// JS
 		script(src="js/custom.js")
 			
-	body#betongvarer
+	body
 		include includes/menu
 	
 		.inner
@@ -15,10 +15,13 @@ html(lang="no")
 					.navigator
 						.prev
 							a(href="betongvare02.html") Forrige
+								span.icon.navigator-left
 						.overview 
-							a(href="betongvarer.html") Tilbake til oversikt
+							a(href="betongskolen.html") Tilbake til oversikt
+								span.icon.navigator-up
 						.next
 							a(href="betongvare02.html") Neste
+								span.icon.navigator-right
 					.img-wrapper
 						img(src="img/betongvare01_big.jpg" alt="")
 				.info-box

@@ -119,6 +119,15 @@ section:last-child {
 .facebook-logo{
 	background-image: url("../img/icons/facebook.svg");
 }
+.navigator-up{
+	background-image: url("../img/icons/navigator-up.svg");
+}
+.navigator-left{
+	background-image: url("../img/icons/navigator-left.svg");
+}
+.navigator-right{
+	background-image: url("../img/icons/navigator-right.svg");
+}
 // .kontrollradet-logo{
 // 	background-image: url("../img/icons/kontrollradet.jpg");
 // }
@@ -834,7 +843,21 @@ section:last-child {
 // --- showcase ---
 .showcase{
 	.info-box{
-		// margin-top: 5rem;
+		margin-top: 3rem;
+	}
+}
+
+@media(max-width: 1200px){
+	.showcase .info-box{
+		margin-top: 0;
+	}
+}
+
+@media(max-width: 1000px){
+	.showcase{
+		> div {
+			width: 100%;
+		}
 	}
 }
 // end of showcase
@@ -843,6 +866,53 @@ section:last-child {
 .navigator{
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 1.25rem;
+
+	a{
+		position: relative;
+		color: $dark-blue;
+	}
+
+	.navigator-up{
+		width: 30px;
+		height: 12px;
+	}
+	.navigator-left, .navigator-right{
+		width: 12px;
+		height: 30px;
+		position: absolute;
+		display: inline-block;
+	}
+
+	.overview a {
+		top: 5px;
+	}
+
+	.navigator-up{
+		position: absolute;
+		top: -15px;
+		width: 100%;
+	}
+
+	.prev a{
+		padding-left: 20px;
+		top: 5px;
+	}
+	.navigator-left{
+		position: absolute;
+		left: 0;
+		top: -5px;
+	}
+	.next a {
+		padding-right: 20px;
+		top: 5px;
+	}
+	.navigator-right{
+		position: absolute;
+		right: 0;
+		top: -5px;
+	}
+
 }
 // end of navigator
 
