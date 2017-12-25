@@ -7,6 +7,10 @@
 	font-family: $font;
 }
 
+// html, body {
+// 	overflow: hidden;
+// }
+
 body {
 	font-size: 100%;
 	background: $light-grey;
@@ -53,7 +57,7 @@ a {
 }
 
 a:hover {
-	color: green;
+	text-decoration: underline;
 }
 
 img {
@@ -64,7 +68,7 @@ img {
 	font-size: 1.5rem;
 }
 
-.bold {
+.bold, b {
 	font-weight: 700;
 }
 
@@ -88,6 +92,17 @@ img {
 	margin-top: 80px;
 }
 
+.pushed-down{
+	margin-top: 3rem;
+}
+
+@media(max-width: 1200px){
+	.pushed-down{
+		margin-top: 0;
+	}
+}
+// end of pushed-down
+
 section:last-child {
 	padding-bottom: 2rem;
 }
@@ -108,11 +123,20 @@ section:last-child {
 
 // --- logos ---
 .menu-icon {
-	background-image: url("../img/icons/menu.svg");
+	background-image: url("../img/icons/menu-blue.svg");
 }
+
+.is-open {
+	background-image: url("../img/icons/close-white.svg");
+}
+.is-closed {
+	background-image: url("../img/icons/menu-blue.svg");
+}
+
 .close-icon {
 	background-image: url("../img/icons/close-white.svg");
 }
+
 .sylteosen-logo {
 	background-image: url("../img/icons/sylteosen.svg");
 }
@@ -128,12 +152,6 @@ section:last-child {
 .navigator-right{
 	background-image: url("../img/icons/navigator-right.svg");
 }
-// .kontrollradet-logo{
-// 	background-image: url("../img/icons/kontrollradet.jpg");
-// }
-// .norsk-akkr-logo{
-// 	background-image: url("../img/icons/norsk-akkr.jpg");
-// }
 .miljofyrtarn-logo{
 	background-image: url("../img/icons/miljofyrtarn.svg");
 }
@@ -142,6 +160,7 @@ section:last-child {
 // --- menu ---
 #menu{
 	// display: none;
+
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -171,8 +190,10 @@ section:last-child {
 		font-weight: bold;
 		padding: 0.5em;
 		transition: color 0.3s ease-in-out;
-		// transform: scale(1.0);
-		// transition: scale 0.3s ease-in-out;
+	}
+
+	.nav-link.active{
+		color: $light-blue;
 	}
 
 	.nav-link:last-of-type{
@@ -182,13 +203,7 @@ section:last-child {
 	.nav-link:hover{
 		color: $light-blue;
 		transition: color 0.3s ease-in-out;
-		// transform: scale(1.1);
-		// transition: scale 0.3s ease-in-out;
 	}
-
-	// .nav-link.active {
-	// 	color: $light-blue;
-	// }
 
 	.logo-wrapper {
 		display: inline-block;
@@ -245,15 +260,16 @@ section:last-child {
 }
 
 #menu-mobile{
-	position: fixed;
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	height: 100vh;
 	min-width: 200px;
 	transform: translateX(100%);
 	transition: transform 0.3s ease-in-out;
 	background: $light-blue;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	height: 100%;
 
 	.menu-content {
 		display: flex;
@@ -313,11 +329,6 @@ section:last-child {
 			height: 50px;
 		}
 
-		.nav-link{
-			// font-size: 0.65rem;
-			// margin: 0;
-		}
-
 		.logo-wrapper .icon {
 			width: 110px;
 			height: 35px;
@@ -340,6 +351,13 @@ section:last-child {
 		margin-top: 50px;
 	}
 }
+
+@media(max-width: 380px){
+	#menu-mobile{
+		min-width: 150px;
+		width: 190px;
+	}
+}
 // end of menu
 
 
@@ -347,25 +365,17 @@ section:last-child {
 #footer {
 	background: $light-blue;
 	color: $white;
-	margin-bottom: 1rem;
 	padding-bottom: 2rem;
+	position: relative;
 
 	.inner {
 		display: flex;
 		justify-content: space-between;
-
-		// > div {
-		// 	width: 33%;
-		// }
+	}
+	p{
+		margin-bottom: 0;
 	}
 }
-
-// .footer-first, .footer-third{
-// 	width: 18%;
-// }
-// .footer-second{
-// 	width: 30%;
-// }
 
 .footer-first{
 	width: 20%;
@@ -439,6 +449,15 @@ section:last-child {
 	}
 }
 
+.footer-bottom-line{
+	background: $light-grey;
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	height: 1rem;
+}
+
 @media(max-width: 1100px){
 	.footer-first{
 		width: 20%;
@@ -458,6 +477,10 @@ section:last-child {
 			width: 50%;
 			margin-right: auto;
 			margin-left: auto;
+		}
+
+		.footer-bottom-line{
+			width: 100%;
 		}
 	}
 
@@ -615,11 +638,11 @@ section:last-child {
 	}
 
 	.img-wrapper {
-		width: 20%;
+		width: 29%;
 	}
 
 	.text-wrapper {
-		width: 76%;
+		width: 67%;
 	}
 	p{
 		font-size: 0.9rem;
@@ -631,16 +654,30 @@ section:last-child {
 		width: 100%;
 
 		.img-wrapper {
-			width: 20%;
+			width: 23%;
 		}
 
 		.text-wrapper {
-			width: 76%;
+			width: 75%;
 		}
 	}
 
 	.list-item:nth-child(2) {
 		margin-top: 2rem;
+	}
+}
+
+@media(max-width: 700px) {
+	.mq-override .list-item {
+		width: 100%;
+
+		.img-wrapper {
+			width: 28%;
+		}
+
+		.text-wrapper {
+			width: 70%;
+		}
 	}
 }
 
@@ -783,13 +820,83 @@ section:last-child {
 }
 // end of grid
 
-// --- employees ---
-// .employees{
-// 	h4{
-// 		margin-bottom: 1rem;
-// 	}
-// }
-// end of employees
+// --- contact-section ---
+.contact-section{
+	display: flex;
+	justify-content: space-between;
+
+	h4, h2, p, a {
+		color: $white;
+		// font-weight: 400;
+		// font-size: 1.2rem;
+	}
+
+	.employees{
+		width: 55%;
+	}
+	.contact-text{
+		width: 30%;
+		p{
+			text-transform: uppercase;
+			font-size: 1.2rem;
+			line-height: 1;
+			margin-bottom: 0.5rem;
+		}
+		a{
+			font-size: 1.2rem;
+		}
+		.email{
+			margin-top: 2rem;
+			a{
+				margin-left: 0.5rem;
+			}
+		}
+	}
+}
+
+@media(max-width: 1200px){
+	.contact-section{
+		.employees{
+			width: 60%;
+		}
+		.contact-text{
+			width: 35%;
+		}
+	}
+}
+
+@media(max-width: 1000px){
+	.contact-section{
+		justify-content: center;
+		.employees, .contact-text{
+			width: 100%;
+			margin: 0 auto;
+		}
+		.contact-text{
+			order: 1;
+			margin-bottom: 4rem;
+		}
+		.employees{
+			order: 2;
+		}
+	}
+}
+
+@media(max-width: 600px){
+	.contact-section{
+		.employees, .contact-text{
+			width: 80%;
+		}
+	}
+}
+
+@media(max-width: 500px){
+	.contact-section{
+		.employees, .contact-text{
+			width: 100%;
+		}
+	}
+}
 
 // --- employees-list ---
 .employees-list{
@@ -800,17 +907,74 @@ section:last-child {
 	margin-bottom: 2rem;
 
 	.employee{
-		width: 22%;
+		width: 24%;
 	}
 
+	.img-wrapper {
+		max-width: 80%;
+		width: 100%;
+		margin: 0 auto;
+	}
 	img{
 		width: 100%;
 		border-radius: 100%;
 	}
 
 }
+@media(max-width: 600px){
+	.employees-list{
+		.employee{
+			width: 47.5%;
+			&:first-of-type, &:nth-of-type(2){
+				margin-bottom: 1rem;
+			}
+		}
+	}
+}
 // end of employees-list
 
+// --- employee ---
+.employee {
+	text-align: center;
+	.name{
+		font-weight: 700;
+		margin-bottom: 0em;
+		margin-top: 0.2rem;
+		// font-size: 0.9rem;
+	}
+	.position, .phone{
+		font-size: 0.7rem;
+		margin-bottom: 0;
+		margin-top: 0.2rem;
+	}
+	.phone {
+		color: $white;
+		padding: 0;
+		// &:hover{
+		// 	text-decoration: none;
+		// }
+	}
+}
+// end of employee
+// end of contact-section
+
+// --- map --
+.map {
+	h4{
+		color: $white;
+		margin-bottom: 1rem;
+	}
+}
+#map{
+	height: 400px;
+	width: 100%;
+}
+
+// Popup box when clicking marker in google maps
+.gm-style-iw{
+	color: $black;
+}
+// end of map
 
 // --- doc ---
 .doc{
@@ -837,22 +1001,22 @@ section:last-child {
 	text-decoration: none;
 	color: $light-blue;
 	text-transform: uppercase;
+	font-size: 0.8rem;
+	float: right;
+	vertical-align: baseline;
+	padding: 0.2rem 0.5rem 0.2rem 2rem;
+}
+
+@media(max-width: 750px)  {
+	.read-more{
+		float: none;
+		padding-left: 0;
+		display: block;
+	}
 }
 // end of read-more
 
 // --- showcase ---
-.showcase{
-	.info-box{
-		margin-top: 3rem;
-	}
-}
-
-@media(max-width: 1200px){
-	.showcase .info-box{
-		margin-top: 0;
-	}
-}
-
 @media(max-width: 1000px){
 	.showcase{
 		> div {
@@ -874,8 +1038,11 @@ section:last-child {
 	}
 
 	.navigator-up{
-		width: 30px;
+		// width: 30px;
 		height: 12px;
+		position: absolute;
+		top: -15px;
+		width: 100%;
 	}
 	.navigator-left, .navigator-right{
 		width: 12px;
@@ -886,12 +1053,6 @@ section:last-child {
 
 	.overview a {
 		top: 5px;
-	}
-
-	.navigator-up{
-		position: absolute;
-		top: -15px;
-		width: 100%;
 	}
 
 	.prev a{
@@ -914,14 +1075,37 @@ section:last-child {
 	}
 
 }
+
+@media(max-width: 480px){
+	.navigator{
+		a{
+			font-size: 0.8rem;
+		}
+		.navigator-up{
+			// width: 25px;
+			height: 10px;
+		}
+		.navigator-left, .navigator-right{
+			width: 10px;
+			height: 25px;
+		}
+		.prev a{
+			padding-left: 18px;
+		}
+		.next a{
+			padding-right: 18px;
+		}
+	}
+}
 // end of navigator
 
 
-#kontakt {
+
+#kontakt{
 	background: $light-blue;
 	color: $white;
 }
 
-#kontakt h4 {
-	color: $white;
-}
+// #kontakt h4, #kontakt h2 {
+// 	color: $white;
+// }

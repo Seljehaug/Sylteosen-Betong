@@ -12,7 +12,7 @@ html(lang="no")
 		section.banner-img.margin-top
 	
 		.inner
-			section.two-cols.content-wrapper
+			section.two-cols.contact-section.content-wrapper
 				.employees
 					.employees-group
 						h4 Administrasjon:
@@ -144,13 +144,26 @@ html(lang="no")
 								
 							
 				.contact-text
-					h1 Kontakt oss
-					p Sentralbord: 992 88 100
-					p Komunalvarer: 992 88 103 
-					p Blandefabrikk: 992 88 105
-					p Produksjon: ???
+					h2 Kontakt oss
+					p Sentralbord: 
+						a(href="tel:992 88 100") 992 88 100
+					p Komunalvarer: 
+						a(href="tel:992 88 103") 992 88 103 
+					p Blandefabrikk: 
+						a(href="tel:992 88 105") 992 88 105
+					p Produksjon: 
+						a(href="tel:???") ???
 					
-					p Epost:
+					p.email Epost:
 						a(href="mailto:inger@sylteosen.no") inger@sylteosen.no
+			
+		section.map
+			.inner 
+				h4 Du finner oss her:
+			.map-wrapper
+				script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6XJVs8gHLpEVikTenXbZMtKfzqi1HoI4")
+				script(src="js/map.js")
+				#map
+			
 					
 		include includes/footer

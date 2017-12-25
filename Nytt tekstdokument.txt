@@ -1,0 +1,2 @@
+Trenger en ny API key for google maps. Har bare brukt den samme som ble brukt på Bunadstudio siden.
+
