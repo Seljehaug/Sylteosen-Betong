@@ -126,20 +126,18 @@ section:last-child {
   left: 0;
   right: 0;
   background: white;
-  z-index: 100; }
-  #menu nav {
-    height: 80px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 1rem 0; }
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 0; }
+  #menu .nav {
+    height: 80px; }
   #menu #menu-normal {
+    float: right;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -168,7 +166,9 @@ section:last-child {
     transition: color 0.3s ease-in-out; }
   #menu .logo-wrapper {
     display: inline-block;
-    margin-right: auto; }
+    margin-right: auto;
+    position: relative;
+    top: -5px; }
     #menu .logo-wrapper .icon {
       width: 140px;
       height: 50px; }
@@ -245,7 +245,7 @@ section:last-child {
 #menu .toggle-menu {
   display: none;
   position: relative;
-  left: -75px;
+  left: -27%;
   width: 25px;
   height: 15px;
   top: 30px;
@@ -261,6 +261,10 @@ section:last-child {
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out; }
 
+@media (max-width: 1000px) {
+  #menu .logo-wrapper {
+    top: 0; } }
+
 @media (max-width: 900px) {
   #menu .nav-link {
     font-size: 0.7rem;
@@ -270,20 +274,28 @@ section:last-child {
     height: 40px; } }
 
 @media (max-width: 750px) {
-  #menu nav {
-    height: 50px; }
-  #menu .logo-wrapper .icon {
-    width: 110px;
-    height: 35px; }
-  #menu #menu-normal {
-    display: none; }
-  #menu #menu-mobile {
-    display: block; }
-  #menu .toggle-menu {
-    display: block;
-    top: 15px; }
+  #menu {
+    padding: 0; }
+    #menu nav {
+      height: 50px; }
+    #menu .logo-wrapper {
+      top: 8px; }
+    #menu .logo-wrapper .icon {
+      width: 87px;
+      height: 33px; }
+    #menu #menu-normal {
+      display: none; }
+    #menu #menu-mobile {
+      display: block; }
+    #menu .toggle-menu {
+      display: block;
+      top: 15px; }
   .margin-top {
     margin-top: 50px; } }
+
+@media (max-width: 500px) {
+  #menu .toggle-menu {
+    left: -22%; } }
 
 @media (max-width: 380px) {
   #menu-mobile {
@@ -410,7 +422,8 @@ section:last-child {
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center; }
+    align-items: center;
+    height: 100%; }
     .footer-first .logos {
       width: 40%; }
     .footer-first .text-content {

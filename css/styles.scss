@@ -159,8 +159,6 @@ section:last-child {
 
 // --- menu ---
 #menu{
-	// display: none;
-
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -168,15 +166,26 @@ section:last-child {
 	background: white;
 	z-index: 100;
 
-	nav{
+	display: flex;
+	align-items: center;
+	padding: 1rem 0;
+
+
+	// nav{
+	// 	height: 80px;
+	// 	display: flex;
+	// 	justify-content: flex-end;
+	// 	align-items: center;
+	// 	padding: 1rem 0;
+	// }
+
+	.nav{
 		height: 80px;
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		padding: 1rem 0;
 	}
 
 	#menu-normal{
+		float: right;
+
 		display: flex;
 		align-items: center;
 	}
@@ -208,6 +217,9 @@ section:last-child {
 	.logo-wrapper {
 		display: inline-block;
 		margin-right: auto;
+
+		position: relative;
+		top: -5px;
 
 		.icon {
 			width: 140px;
@@ -296,7 +308,7 @@ section:last-child {
 	display: none;
 	position: relative;
 	// right: 50px;
-	left: -75px;
+	left: -27%;
 	width: 25px;
 	height: 15px;
 	top: 30px;
@@ -306,6 +318,12 @@ section:last-child {
 #menu-mobile.active{
 	transform: translateX(0%);
 	transition: transform 0.3s ease-in-out;
+}
+
+@media(max-width: 1000px){
+	#menu .logo-wrapper{
+		top: 0;
+	}
 }
 
 @media(max-width: 900px){
@@ -324,14 +342,21 @@ section:last-child {
 
 @media(max-width: 750px){
 	#menu{
+		padding: 0;
 
 		nav{
 			height: 50px;
 		}
 
+		.logo-wrapper{
+			top: 8px;
+		}
+
 		.logo-wrapper .icon {
-			width: 110px;
-			height: 35px;
+			// width: 110px;
+			width: 87px;
+			// height: 35px;
+			height: 33px;
 		}
 
 		#menu-normal{
@@ -349,6 +374,12 @@ section:last-child {
 	}
 	.margin-top{
 		margin-top: 50px;
+	}
+}
+
+@media(max-width: 500px){
+	#menu .toggle-menu{
+		left: -22%;
 	}
 }
 
@@ -491,6 +522,8 @@ section:last-child {
 	.footer-first {
 		display: flex;
 		align-items: center;
+		// fix for weird bug in IE where it gets massive height
+		height: 100%;
 
 		.logos {
 			width: 40%;
