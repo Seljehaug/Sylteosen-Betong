@@ -1,3 +1,5 @@
-Trenger en ny API key for google maps. Har bare brukt den samme som ble brukt på Bunadstudio siden.
+Du må legge til en ny key for google maps. Den som er brukt nå er den samme som jeg brukte på Bunadstudio siden. 
 
-En bedre måte å vise active state på? Index, om oss og dokumentasjon har ingen active state på desktop
+Har lagt til en active state for å vise brukeren hvilken side man er på. Dette har du kanskje en bedre 
+løsning på selv. Nå får man ingen indikasjon på dette for index (hjem), om oss og dokumentasjon på desktop. 
+På mobil må man åpne menyen for å finne ut hvilken side man er på, men det er kanskje greit nok.  
