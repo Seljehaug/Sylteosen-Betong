@@ -12,7 +12,7 @@ $(function(){
 
 			menu.removeClass('active');
 			// $('body, html').css('overflow', 'auto');
-			$('.toggle-menu .menu-icon').css('background-image', 'url("../img/icons/menu-blue.svg")');
+			$('.toggle-menu .menu-icon').css('background-image', 'url("img/icons/menu-blue.svg")');
 			if(w_width > 500){
 				toggle.css({'left': '-27%', 'transition': 'left 0.15s ease-in-out'});
 			}else{
@@ -22,7 +22,7 @@ $(function(){
 		}else{
 			menu.addClass('active');
 			// $('body, html').css('overflow', 'hidden');
-			$('.toggle-menu .menu-icon').css('background-image', 'url("../img/icons/close-white.svg")');
+			$('.toggle-menu .menu-icon').css('background-image', 'url("img/icons/close-white.svg")');
 			toggle.css({'left': '1rem', 'transition': 'left 0.15s ease-in-out'});
 		}
 	});
